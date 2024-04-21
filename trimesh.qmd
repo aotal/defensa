@@ -1,0 +1,49 @@
+---
+title: Applicator Reconstruction in Gynecological Brachytherapy on MRI
+subtitle: Interstitial Brachytherapy and Applicators Libraries
+author: "[Antonio Otal Palacín](aotalpalacin@gmail.com)"
+institute: Universitat de Valencia
+format: 
+    revealjs:
+        logo: logo.png
+        footer: "[IRIMED](http://www.uv.es/radiofisica/index.html)"
+        css: styles.css
+        number-sections: false
+        slide-number: false
+        center: false
+jupyter: python3    
+---
+
+## ALFIM2016
+
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+intracav=trimesh.load('stl/viena/intracav.stl')
+pellets=trimesh.load('stl/viena/pellets.stl')
+support=trimesh.load('stl/viena/support.stl')
+ring=trimesh.load('stl/viena/ring.stl')
+needles=trimesh.load('stl/viena/needles.stl')
+pellets_color = [1.0, 0.5, 0.0, 1.0]
+support_color = [0.0, 0.0, 1.0, 1.0]
+ring_color = [1.0, 0.0, 0.0, 1.0]
+pellets.visual.face_colors = pellets_color
+support.visual.face_colors = support_color
+ring.visual.face_colors = ring_color
+scene = trimesh.Scene()
+scene.add_geometry(intracav)
+scene.add_geometry(pellets)
+scene.add_geometry(support)
+scene.add_geometry(needles)
+scene.add_geometry(ring)
+scene.show()
+```
+
+
+::: notes
+Premio en Argentina
+:::
