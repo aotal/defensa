@@ -1,0 +1,27 @@
+---
+title: Applicator Reconstruction in Gynecological Brachytherapy on MRI
+subtitle: Interstitial Brachytherapy and Applicators Libraries
+author: "[Antonio Otal Palacín](aotalpalacin@gmail.com)"
+institute: Universitat de Valencia
+format: 
+    revealjs:
+        logo: logo.png
+        footer: "[IRIMED](http://www.uv.es/radiofisica/index.html)"
+        css: styles.css
+        number-sections: false
+        slide-number: false
+        center: false
+jupyter: python3    
+---
+
+## Summary
+
+-   Brachytherapy
+-   Gynecological Brachytherapy
+-   Applicator reconstruction
+-   Contributions
+
+::: notes
+Notes
+:::
+
