@@ -8,9 +8,19 @@
   border-width: 3px;
 }
 
+.center h1 {
+  text-align: center;
+}
+
+.center h2 {
+  text-align: center;
+}
+
 .reveal .slide-logo {
-  height: 75px !important;
-  width: 180px!important;
+  top: 0;
+  left: 75;
+  height: 125px !important;
+  width: 125px!important;
   max-width: unset !important;
   max-height: unset !important;
 }

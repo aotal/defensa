@@ -14,7 +14,9 @@ format:
 jupyter: python3    
 ---
 
-## ALFIM2016
+# Premios
+
+## ALFIM2016 {.center}
 
 
 ```{python}
