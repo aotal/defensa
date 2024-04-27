@@ -1,27 +1,44 @@
 ---
-title: Applicator Reconstruction in Gynecological Brachytherapy on MRI
-subtitle: Interstitial Brachytherapy and Applicators Libraries
+title: Soluciones para la reconstrucción de aplicadores ginecológicos en braquiterapia sobre MRI
 author: "[Antonio Otal Palacín](aotalpalacin@gmail.com)"
-institute: Universitat de Valencia
+lang: es
 format: 
     revealjs:
         logo: logo.png
-        footer: "[IRIMED](http://www.uv.es/radiofisica/index.html)"
         css: styles.css
         number-sections: false
         slide-number: false
         center: false
+        title-slide-attributes:
+            data-background-image: logo.png
+            data-background-size: 45% 
+            data-background-opacity: "0.05"
+            data-background-color: "white"
+        date-format: "[Valencia, ] DD [de] MMMM [de] YYYY"
+        date: 05/24/2024
 jupyter: python3    
 ---
 
+# Introducción
+
 ## Summary
+
+
 
 -   Brachytherapy
 -   Gynecological Brachytherapy
 -   Applicator reconstruction
 -   Contributions
 
+
 ::: notes
 Notes
 :::
 
+# Artículo 3
+
+![](img/cancers-01.png)
+
+# Pre-plan technique feasibility in multi-interstitial/endocavitary perineal gynecological brachytherapy.
+
+# Review on Treatment Planning Systems for Cervix Brachytherapy (Interventional Radiotherapy): Some Desirable and Convenient Practical Aspects to Be Implemented from Radiation Oncologist and Medical Physics Perspectives.

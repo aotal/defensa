@@ -10,17 +10,41 @@
 
 .center h1 {
   text-align: center;
+  font-size:10px;
 }
 
+
 .center h2 {
+  top: 0;
   text-align: center;
 }
 
 .reveal .slide-logo {
-  top: 0;
-  left: 75;
   height: 125px !important;
   width: 125px!important;
   max-width: unset !important;
   max-height: unset !important;
 }
+
+.quarto-title-author {
+  color:black;
+  font-size:1.2cm;
+}
+
+.reveal .title{
+  color:rgb(65, 100, 165);
+  font-size:1.5cm;
+}
+
+.date {
+  font-size: 0.75cm;
+}
+
+.reveal .slide-logo {
+  z-index: -999 !important;
+}
+
+
+
+
+
