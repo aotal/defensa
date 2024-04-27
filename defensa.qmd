@@ -9,6 +9,7 @@ format:
         number-sections: false
         slide-number: false
         center: false
+        preview-links: true
         title-slide-attributes:
             data-background-image: logo.png
             data-background-size: 45% 
@@ -16,7 +17,7 @@ format:
             data-background-color: "white"
         date-format: "[Valencia, ] DD [de] MMMM [de] YYYY"
         date: 05/24/2024
-jupyter: python3    
+jupyter: python3
 ---
 
 # Introducción
@@ -35,10 +36,28 @@ jupyter: python3
 Notes
 :::
 
-# Artículo 3
+
+# Publicación 1
+
+![](img/librerias-1.png)
+
+::: notes
+Notes
+:::
+
+# Publicación 2
+
+![](img/preplan-1.png)
+
+::: notes
+Notes
+:::
+
+# Publicación 3
 
 ![](img/cancers-01.png)
 
-# Pre-plan technique feasibility in multi-interstitial/endocavitary perineal gynecological brachytherapy.
+::: notes
+Notes
+:::
 
-# Review on Treatment Planning Systems for Cervix Brachytherapy (Interventional Radiotherapy): Some Desirable and Convenient Practical Aspects to Be Implemented from Radiation Oncologist and Medical Physics Perspectives.

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@kitware/vtk.js": "^30.4.0"
+  }
+}
