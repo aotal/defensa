@@ -10,6 +10,14 @@ format:
         slide-number: false
         center: false
         preview-links: true
+        include-in-header:
+            text: 
+                <script type="text/javascript" src="https://unpkg.io/itk-vtk-viewer@9.14.1/dist/itkVtkViewerCDN.js"></script>
+
+
+
+
+
         title-slide-attributes:
             data-background-image: logo.png
             data-background-size: 45% 
@@ -36,6 +44,17 @@ jupyter: python3
 Notes
 :::
 
+
+## Test
+
+```{=html}
+    <div
+      style="float: left; display: inline-block; border: 0px solid gray";
+      class="itk-vtk-viewer"
+      data-url="https://raw.githubusercontent.com/aotal/imjoyplug/master/data/imagen1.nrrd"
+      data-viewport="1200x600"
+    ></div>
+```
 
 # Publicación 1
 
