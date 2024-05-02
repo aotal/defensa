@@ -49,3 +49,14 @@ scene.show()
 ::: notes
 Premio en Argentina
 :::
+
+## Test {.center}
+
+```{=html}
+    <iframe width="1200" height="600" src="https://imjoy.io/lite?plugin=https://raw.githubusercontent.com/aotal/imjoyplug/master/src/file3.imjoy.html" title="Example"></iframe>
+```
+
+::: notes
+Prueba imjoy
+:::
+
