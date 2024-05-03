@@ -60,3 +60,13 @@ Premio en Argentina
 Prueba imjoy
 :::
 
+## Test 2
+
+```{=html}
+    <div
+      style="float: left; display: inline-block; border: 0px solid gray";
+      class="itk-vtk-viewer"
+      data-url="https://raw.githubusercontent.com/aotal/imjoyplug/master/data/imagen1.nrrd"
+      data-viewport="1200x600"
+    ></div>
+```

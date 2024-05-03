@@ -13,11 +13,6 @@ format:
         include-in-header:
             text: 
                 <script type="text/javascript" src="https://unpkg.io/itk-vtk-viewer@9.14.1/dist/itkVtkViewerCDN.js"></script>
-
-
-
-
-
         title-slide-attributes:
             data-background-image: logo.png
             data-background-size: 45% 
@@ -34,27 +29,39 @@ jupyter: python3
 
 
 
--   Brachytherapy
--   Gynecological Brachytherapy
--   Applicator reconstruction
--   Contributions
+::: notes
+Notes
+:::
 
+## Braquiterapia ginecológica
 
 ::: notes
 Notes
 :::
 
+## Imagen en BT de cérvix {auto-animate="true"}
 
-## Test
+Ultrasonidos
 
-```{=html}
-    <div
-      style="float: left; display: inline-block; border: 0px solid gray";
-      class="itk-vtk-viewer"
-      data-url="https://raw.githubusercontent.com/aotal/imjoyplug/master/data/imagen1.nrrd"
-      data-viewport="1200x600"
-    ></div>
-```
+Tomografía por emisión de positrones (PET/CT)
+
+Tomografía Computarizada
+
+Resonancia Magnética Nuclear
+
+
+::: notes
+
+:::
+
+## Imagen en BT de cérvix {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+Tomografía Computarizada
+
+Resonancia Magnética Nuclear
+:::
+
 
 # Publicación 1
 
