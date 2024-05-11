@@ -75,11 +75,46 @@ Resonancia Magnética Nuclear
 
 ## Resonancia Magnética Nuclear
 
-- 
+::: rows
+
+::: {.row width="50%" style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/MRIMandatory.png){width="70%"}
+:::
+
+::: {.row width="50%"}
 - Las secuencias de MRI más útiles son la T2 para visualizar la anatomía y la colocación del aplicador.
+- Secuencias adicionales como la T1 con contraste o la isotrópica 3D pueden proporcionar información complementaria.
+:::
+
+:::
 
 ::: notes
 
+:::
+
+## MRI vs CT: Cervix
+
+::: {layout-ncol=2}
+
+![](img/CervixCT.png){width=85%}
+
+![](img/CervixMR.png){width=85%}
+
+:::
+
+
+## MRI vs CT: Aplicador
+
+::: {layout-ncol=2}
+
+![](img/CTFletcher.JPG){width=85%}
+
+![](img/MRIFletcher.JPG){width=85%}
+
+:::
+
+::: notes
+Volver a comentar la solución del registro vs reconstrucción directa. Hay que recordar que la adquisición de imágenes no se hace en el mismo lugar ni al mismo tiempo.
 :::
 
 ## ¿Qué es la reconstrucción de aplicadores?
@@ -105,7 +140,7 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 
 ::: {.column width="50%"}
 ::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
-![](img/EfectoIncertidumbrePosicionamiento.PNG)
+![](img/EfectoIncertidumbrePosicionamiento.PNG){width="70%"}
 :::
 :::
 
@@ -374,6 +409,52 @@ scene.show()
 
 :::
 
+## *Dummies* CT
+
+::: {layout-ncol="2"}
+
+![](img/dummies.jpg)
+
+![](img/Dummies_bebig.jpg)
+
+
+:::
+
+::: notes
+Hechas de materiales de Z alto
+Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto. 
+:::
+
+## *Dummies* MRI
+
+::: {layout-ncol="2"}
+
+
+::: {layout-nrow="2"}
+
+![](img/DummiesMR_Image.jpg)
+
+::: {.callout-caution}
+No hay *dummies* comerciales para agujas en MRI.
+:::
+
+:::
+
+::: {layout-nrow="2"}
+
+![](img/DummiesMR.png){width="50%"}
+
+![](img/DummiesPepe.png){width="50%"}
+
+:::
+
+:::
+
+::: notes
+Hechas de materiales con "hidrógenos"(Por la resonancia)
+Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
+:::
+
 # Publicación 1
 
 ![](img/librerias-1.png)
@@ -398,3 +479,17 @@ Notes
 Notes
 :::
 
+# Discusión
+
+
+::: notes
+Notes
+:::
+
+
+# Conclusiones
+
+
+::: notes
+Notes
+:::
