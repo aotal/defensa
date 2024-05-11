@@ -62,6 +62,317 @@ Tomografía Computarizada
 Resonancia Magnética Nuclear
 :::
 
+## Tomografía Computarizada
+
+- El CT es una modalidad de imagen ampliamente utilizada en BT ginecológica para el tratamiento de tumores cervicales
+- Permite delinear los OAR de forma comparable a la MRI
+- Su uso está muy extendido y los Oncólogos radioterápicos están familiarizados con su interpretación.
+- Limitación es el contraste relativamente bajo de los tejidos blandos en comparación con la MRI
+
+::: notes
+
+:::
+
+## Resonancia Magnética Nuclear
+
+- 
+- Las secuencias de MRI más útiles son la T2 para visualizar la anatomía y la colocación del aplicador.
+
+::: notes
+
+:::
+
+## ¿Qué es la reconstrucción de aplicadores?
+
+::: columns
+::: {.column width="50%"}
+![](img/EsquemaLigadura.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](img/Gastro.png){width="100%"}
+:::
+:::
+
+La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula la fuente, así como la primera posición de parada.
+
+::: notes
+
+:::
+
+## Impacto en la distribución de dosis
+::: columns
+
+::: {.column width="50%"}
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/EfectoIncertidumbrePosicionamiento.PNG)
+:::
+:::
+
+::: {.column width="50%"}
+Párametros de histograma
+
+- Vejiga y recto en la dirección antero-posterior: 5%-6% por mm
+- Resto: 4% por mm 
+
+
+:::
+:::
+
+
+::: {.callout-warning}
+El D2cc del recto es el parámetro más sensible a los desplazamientos, cambiando aproximadamente un 10% por cambio de ±1.5 mm.
+:::
+
+::: notes
+Incidir en la importancia de la reconstrucción de los aplicadores
+:::
+
+## Modos de reconstrucción
+
+- Reconstrucción directa
+- Reconstrucción mediante bibliotecas
+- Planes híbridos
+
+::: notes
+
+:::
+
+## Reconstrucción directa
+
+- El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente en el sistema de referencia de la secuencia de imágenes.
+
+- Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
+
+## Pros y contras de la reconstrucción directa
+
+### Pros
+
+- Como su nombre indica es la manera más directa para reconstruir el canal de una fuente.
+
+### Contras
+
+- Las trayectoria de la fuente puede no ser fácilmente identificable.
+- El espesor de corte. 
+
+::: notes
+
+:::
+
+# Bibliotecas de aplicadores
+
+::: notes
+
+:::
+
+## ¿Qué son las bibliotecas de aplicadores?
+
+- El objetivo de la reconstrucción es la de encontrar la transformación lineal que ha de aplicarse a un modelo para que quede superpuesto sobre la imagen.
+
+- En contraposición a la reconstrucción directa, no es necesario conocer completamente la trayectoria de la fuente y la primera posición de parada.
+
+- Es útil unicamente en aplicadores rígidos
+
+
+::: notes
+
+:::
+
+## Ejemplos de bibliotecas de aplicadores
+
+::: {layout-nrow=2}
+### Oncentra {.row width="50%"}
+
+![](img/biboncentra2.jpg){fig-align="center" width="40%"}
+
+
+
+### Sagiplan {.center .row width="50%"}
+
+::: columns
+
+::: {.column width="50%"}
+![](img/biblsagiplan1.jpg){fig-align="center" width="40%"}
+:::
+
+::: {.column width="50%"}
+![](img/biblsagiplan2.jpg){fig-align="center" width="30%"}
+:::
+:::
+
+:::
+
+::: notes
+
+:::
+
+
+## Transformaciones lineales
+
+\begin{align}
+
+P=
+\begin{pmatrix}
+R &  \vec{t}\\
+0 &  1\\
+\end{pmatrix}
+
+\ \
+
+R=
+\begin{pmatrix}
+r_{xx} & r_{xy} & r_{xz} \\
+r_{yx} & r_{yy} & r_{yz} \\
+r_{zx} & r_{zy} & r_{zz} \\
+\end{pmatrix}
+
+\ \
+
+\vec{t}=
+\begin{pmatrix}
+t_{x} \\
+t_{y} \\
+t_{z} \\
+\end{pmatrix}
+
+\end{align}
+
+\begin{align}
+
+P_1 P_2=
+\begin{pmatrix}
+R_1 &  \vec{t_1}\\
+0 &  1\\
+\end{pmatrix}
+\begin{pmatrix}
+R_2 &  \vec{t_2}\\
+0 &  1\\
+\end{pmatrix}=
+\begin{pmatrix}
+R_1 R_2 & R1 \vec{t_2}+ \vec{t_1}\\
+0 &  1\\
+\end{pmatrix}
+
+
+\end{align}
+
+\begin{align}
+
+R R^T=\mathbb{I}
+
+\rightarrow
+
+P^{-1}=
+\begin{pmatrix}
+R^T &  -R^{T}\vec{t}\\
+0 &  1\\
+\end{pmatrix}
+
+\end{align}
+
+::: notes
+
+:::
+
+## Ejemplo de esquema del aplicador
+
+![](img/EsquemaApp.png)
+
+::: notes
+
+:::
+
+## Equivalencia en la Biblioteca
+
+::: {layout-nrow=2}
+### Oncentra
+
+```XML
+<connector name="OVOIDRI">
+  <centerPoint x="39.2329311043" y="-8.287564434702" z="264.9381801444" />
+  <axisDirection x="-0.08682408883347" y="0.8660254037844" z="-0.4924038765061" />
+  <referenceDirection x="0.1503837331804" y="0.5" z="0.8528685319524" />
+</connector>
+```
+
+### Sagiplan 
+
+```XML
+<Applicator>
+[...]
+  <Matrix>
+    <M00>1.51522653757651060E-01</M00>
+    <M01>-9.87841876892012416E-01</M01>
+    <M02>3.47751586150990138E-02</M02>
+    <M03>-1.25793160108370663E+05</M03>
+    <M10>4.88627086188037407E-01</M10>
+[...]
+  </Matrix>
+[...]
+</Applicator>
+```
+:::
+
+::: notes
+
+:::
+
+## Piezas sin transformación
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+CD=trimesh.load('stl/utrecht/CD.stl')
+CI=trimesh.load('stl/utrecht/CI.stl')
+OD=trimesh.load('stl/utrecht/OD.stl')
+OI=trimesh.load('stl/utrecht/OI.stl')
+IU=trimesh.load('stl/utrecht/IU.stl')
+SP=trimesh.load('stl/utrecht/SP.stl')
+scene = trimesh.Scene()
+scene.add_geometry(CD)
+scene.add_geometry(CI)
+scene.add_geometry(IU)
+scene.add_geometry(SP)
+scene.add_geometry(OI)
+scene.add_geometry(OD)
+scene.show()
+```
+
+## Modelo completo
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+CD=trimesh.load('stl/utrecht/CD_T.stl')
+CI=trimesh.load('stl/utrecht/CI_T.stl')
+OD=trimesh.load('stl/utrecht/OD_T.stl')
+OI=trimesh.load('stl/utrecht/OI_T.stl')
+IU=trimesh.load('stl/utrecht/IU_T.stl')
+SP=trimesh.load('stl/utrecht/SP_T.stl')
+scene = trimesh.Scene()
+scene.add_geometry(CD)
+scene.add_geometry(CI)
+scene.add_geometry(IU)
+scene.add_geometry(SP)
+scene.add_geometry(OI)
+scene.add_geometry(OD)
+scene.show()
+```
+
+
+
+# *Dummies* en MRI
+
+
+::: notes
+
+:::
 
 # Publicación 1
 
