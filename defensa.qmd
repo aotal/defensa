@@ -553,14 +553,63 @@ Notes
 :::
 
 
+## Material y métodos I
 
-## Material y métodos
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+ND=trimesh.load('stl/utrecht/ND_sola.stl')
+neeedle_color = [1.0, 0.5, 0.0, 1.0]
+ND.visual.face_colors = neeedle_color
+scene = trimesh.Scene()
+scene.add_geometry(ND)
+scene.show()
+```
 
-## Resultados
+
+## Material y métodos II
+
+::: {layout-nrow=2}
+![](img/freecad_tb1.png){width=100%}
+
+![](img/freecad_tb2.png){width=50%}
+
+![](img/freecad_tb3.png){width=75%}
+
+![](img/freecad_logo.png)
+:::
+
+
+## Material y métodos III
+
+{{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
+
+
+## Resultados I
+
+::: columns
+
+::: {.column width=50%}
+![](img/utrecht_virtual.jpg)
+:::
+
+::: {.column width=50%}
+![](img/benidorm_virtual.png)
+:::
+
+:::
+
+## Resultados II 
 
 ::: columns
 
 ::: {.column width="50%"}
+
+### Utrecht
+
 ```{mermaid}
 graph TD;
     id0(Rule)-->id1(189722-04A<br>Fijación);
@@ -579,7 +628,20 @@ graph TD;
 :::
 
 ::: {.column width="50%"}
-![](img/TB_bg.png){fig-align="center" width="100%"}
+
+### Benidorm
+
+```{mermaid}
+graph TD;
+    id0(Rule)-->id1(201722-04A<br>Fijación);
+    id1--CYLINDER-->id2_1(Cilindro elegido);
+    id1--IUFIX-->id2_2(IU elegida);
+    id1--NEEDLE1-->id2_3_1(Aguja 1)
+    id1--NEEDLE2-->id2_3_2(Aguja 2)
+    id1--NEEDLE3-->id2_3_3(Aguja 3)
+    id1-->id2_3_4([...])
+    id1--NEEDLEX-->id2_3_X(Aguja X)
+```
 :::
 :::
 
