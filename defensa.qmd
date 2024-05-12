@@ -23,20 +23,79 @@ format:
 jupyter: python3
 ---
 
+# Índice
+
+- Introducción
+- *Dummies*
+- Bibliotecas de aplicadores
+- Publicaciones
+- Discusión general
+- Conclusiones
+
 # Introducción
-
-## Summary
-
-
 
 ::: notes
 Notes
 :::
 
-## Braquiterapia ginecológica
+## Cáncer de cuello uterino
+
+![](img/EstadisticaCCervix.jpg)
 
 ::: notes
-Notes
+- Tercer cáncer más frecuente en mujeres
+- No hablaremos del resto de tumores ginecológicos, aunque son exportables algunas de la metodologías expuestas
+:::
+
+
+
+
+
+## Esquema de tratamiento {auto-animate="true"}
+
+ Enfermedad localmente avanzada (FIGO IB2-IV4)[^1]
+
+ Radioterapia externa de la zona pélvica
+
+ Quimioterapia concurrente
+
+ Braquiterapia
+
+
+[^1]: Estas etapas implican una extensión más significativa del tumor, pudiendo abarcar desde lesiones visibles en el cuello uterino hasta la invasión de áreas más allá del útero, como la pared pélvica, la vagina inferior o incluso la mucosa de la vejiga o el recto (ICRU89)
+
+
+
+::: notes
+Recordar que hablaremos de braquiterapia menos en el artículo 3
+:::
+
+## Esquema de tratamiento {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+Braquiterapia
+:::
+
+## ICRU89 {.center}
+
+::: columns
+
+::: {.column width="20%"}
+![](img/logoicru.png)
+:::
+
+::: {.column width="80%"}
+
+### ICRU Report 89, Prescribing, Recording, and Reporting Brachytherapy for Cancer of the Cervix
+
+:::
+
+:::
+
+
+
+::: notes
+
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -194,6 +253,71 @@ Incidir en la importancia de la reconstrucción de los aplicadores
 
 :::
 
+# *Dummies* en MRI
+
+
+::: notes
+
+:::
+
+## *Dummies* CT
+
+::: {layout-ncol="2"}
+
+![](img/dummies.jpg)
+
+![](img/Dummies_bebig.jpg)
+
+
+:::
+
+::: notes
+Hechas de materiales de Z alto
+Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto. 
+:::
+
+
+## *Dummies* MRI
+
+::: {layout-ncol="3"}
+
+![](img/DummiesMR_Image.jpg){width="85%"}
+
+![](img/DummiesMR.png){width="100%"}
+
+![](img/DummiesPepe.png){width="120%"}
+
+:::
+
+::: {.callout-note}
+No hay *dummies* comerciales en el caso de agujas.
+:::
+
+::: notes
+Hechas de materiales con "hidrógenos"(Por la resonancia)
+Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
+:::
+
+## *Dummies* puntuales
+
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/richat2015.png)
+:::
+
+::: {layout-ncol="2"}
+
+![](img/auxina.jpg){width="50%"}
+
+![](img/pellets1.png){width="100%"}
+
+
+:::
+
+
+::: notes
+
+:::
+
 # Bibliotecas de aplicadores
 
 ::: notes
@@ -213,7 +337,7 @@ Incidir en la importancia de la reconstrucción de los aplicadores
 
 :::
 
-## Ejemplos de bibliotecas de aplicadores
+## Bibliotecas de aplicadores
 
 ::: {layout-nrow=2}
 ### Oncentra {.row width="50%"}
@@ -311,11 +435,16 @@ R^T &  -R^{T}\vec{t}\\
 
 ## Ejemplo de esquema del aplicador
 
-![](img/EsquemaApp.png)
+```{mermaid}
 
-::: notes
-
-:::
+graph TD;
+    id0(Rule)-->id1(189722-04A<br>Fijación);
+    id1--OVOID1FIX-->id2_1(189735-06<br>Canal derecho);
+    id1--IUFIX-->id2_2(IU elegida);
+    id1--OVOID2FIX-->id2_3(189740-06<br>Canal izquierdo);
+    id2_1--OVOIDRI-->id3_1_4(Ovoide<br>derecho)
+    id2_3--OVOIDRI-->id3_3_4(Ovoide<br>izquierdo)
+```
 
 ## Equivalencia en la Biblioteca
 
@@ -401,60 +530,6 @@ scene.show()
 ```
 
 
-
-# *Dummies* en MRI
-
-
-::: notes
-
-:::
-
-## *Dummies* CT
-
-::: {layout-ncol="2"}
-
-![](img/dummies.jpg)
-
-![](img/Dummies_bebig.jpg)
-
-
-:::
-
-::: notes
-Hechas de materiales de Z alto
-Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto. 
-:::
-
-## *Dummies* MRI
-
-::: {layout-ncol="2"}
-
-
-::: {layout-nrow="2"}
-
-![](img/DummiesMR_Image.jpg)
-
-::: {.callout-caution}
-No hay *dummies* comerciales para agujas en MRI.
-:::
-
-:::
-
-::: {layout-nrow="2"}
-
-![](img/DummiesMR.png){width="50%"}
-
-![](img/DummiesPepe.png){width="50%"}
-
-:::
-
-:::
-
-::: notes
-Hechas de materiales con "hidrógenos"(Por la resonancia)
-Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
-:::
-
 # Publicación 1
 
 ![](img/librerias-1.png)
@@ -462,6 +537,54 @@ Al ser líquidos, problemas de contrucción. De ahí la dificultad para las aguj
 ::: notes
 Notes
 :::
+
+## Objetivos
+
+
+::: columns
+
+::: {.column width="50%"}
+![](img/utrecht.jpg){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![](img/TB_bg.png){fig-align="center" width="100%"}
+:::
+:::
+
+
+
+## Material y métodos
+
+## Resultados
+
+::: columns
+
+::: {.column width="50%"}
+```{mermaid}
+graph TD;
+    id0(Rule)-->id1(189722-04A<br>Fijación);
+    id1--OVOID1FIX-->id2_1(189735-06<br>Canal derecho);
+    id1--IUFIX-->id2_2(IU elegida);
+    id1--OVOID2FIX-->id2_3(189740-06<br>Canal izquierdo);
+    id2_1--NEEDLE1-->id3_1_1(Aguja 1)
+    id2_1--NEEDLE2-->id3_1_2(Aguja 2)
+    id2_1--NEEDLE3-->id3_1_3(Aguja 3)
+    id2_1--OVOIDRI-->id3_1_4(Ovoide<br>derecho)
+    id2_3--NEEDLE1-->id3_3_1(Aguja 1)
+    id2_3--NEEDLE2-->id3_3_2(Aguja 2)
+    id2_3--NEEDLE3-->id3_3_3(Aguja 3)
+    id2_3--OVOIDRI-->id3_3_4(Ovoide<br>izquierdo)
+```
+:::
+
+::: {.column width="50%"}
+![](img/TB_bg.png){fig-align="center" width="100%"}
+:::
+:::
+
+
+## Discusión
 
 # Publicación 2
 
@@ -471,6 +594,14 @@ Notes
 Notes
 :::
 
+## Objetivos
+
+## Material y métodos
+
+## Resultados
+
+## Discusión
+
 # Publicación 3
 
 ![](img/cancers-01.png)
@@ -478,6 +609,16 @@ Notes
 ::: notes
 Notes
 :::
+
+## Objetivos
+
+
+
+## Material y métodos
+
+## Resultados
+
+## Discusión
 
 # Discusión
 
