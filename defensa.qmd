@@ -648,6 +648,11 @@ graph TD;
 
 ## Discusión
 
+- El método agiliza la reconstrucción de las agujas ya que se apoya en la parte intracavitaria
+- El orificio de salida de la aguja en el ovoide permanece invariante y solamente se ha de hacer giros alrededor del mismo
+- Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvándola sobre dicho plano
+- La colocación del aplicador Benidorm queda perfectamente determinado con los *pellets* de vitamina E.  
+
 # Publicación 2
 
 ![](img/preplan-1.png)
@@ -657,6 +662,12 @@ Notes
 :::
 
 ## Objetivos
+
+
+
+::: notes
+Notes
+:::
 
 ## Material y métodos
 
