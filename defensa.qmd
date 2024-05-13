@@ -663,13 +663,15 @@ Notes
 
 ## Objetivos
 
-
+![](img/TB_freecad.png)
 
 ::: notes
 Notes
 :::
 
 ## Material y métodos
+
+![](img/Preplan1.png)
 
 ## Resultados
 
