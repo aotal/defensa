@@ -695,11 +695,113 @@ Notes
 
 ## Discusión
 
-# Discusión
+# Trabajos posteriores
+
+::: notes
+Premio en Argentina
+:::
+
+## ALFIM2016
+
+::: {layout-ncol="2"}
+
+::: {layout-nrow="2"}
+
+![](img/viena2.png){width="100%"}
+
+![](img/viena3.jpg){width="100%"}
+
+:::
+
+::: {layout-nrow="2"}
+
+{{< video https://www.youtube.com/embed/8CICX-2W92Q?&autoplay=1&playlist=8CICX-2W92Q&loop=1&mute=1&hl=en&answer=140174 width="130" height="220" >}}
+
+![](img/viena1.png){width="100%"}
+
+:::
+:::
+
+
+::: notes
+Hablar de las bolas de Auxina. Que ya se usaron en el template Benidorm
+:::
+
+## ALFIM2016
+
+::: {layout-ncol="2"}
+
+![](img/VienaPellets1.JPG){width="100%"}
+![](img/VienaPellets2.JPG){width="100%"}
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+intracav=trimesh.load('stl/viena/intracav.stl')
+pellets=trimesh.load('stl/viena/pellets.stl')
+support=trimesh.load('stl/viena/support.stl')
+ring=trimesh.load('stl/viena/ring.stl')
+needles=trimesh.load('stl/viena/needles.stl')
+pellets_color = [1.0, 0.5, 0.0, 1.0]
+support_color = [0.0, 0.0, 1.0, 1.0]
+ring_color = [1.0, 0.0, 0.0, 1.0]
+pellets.visual.face_colors = pellets_color
+support.visual.face_colors = support_color
+ring.visual.face_colors = ring_color
+scene = trimesh.Scene()
+scene.add_geometry(intracav)
+scene.add_geometry(pellets)
+scene.add_geometry(support)
+scene.add_geometry(needles)
+scene.add_geometry(ring)
+scene.show()
+```
+
+:::
+
+
+
+
 
 
 ::: notes
 Notes
+:::
+
+## AAPM2019
+
+Characterization of a Gynaecological Titanium Applicator for Direct Reconstruction on MRI
+
+::: {layout-ncol="2"}
+![](img/D3.png){width="100%"}
+![](img/D2.png){width="100%"}
+
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+ImagenEntrada=trimesh.load('stl/Fletcher.stl')
+ImagenEntrada.show()
+```
+:::
+
+::: notes
+Explicar el intento de parametrizar el aplicador para convertirlo en rígido. Volver sobre el concepto de semirígidos.
+:::
+
+## ABS2021
+
+A novel tool for the reconstruction of the Utrecht applicator on MRI
+
+{{< video https://www.youtube.com/embed/kv827vIsAZM?&start=197&autoplay=1&playlist=kv827vIsAZM&loop=0&mute=1&hl=en&answer=140174 width="800" height="448" aspect-ratio="16x9" >}}
+
+::: notes
+Hablar a futuro de intentar utilizar la AI para automatizar completamente el proceso y obviar la parte de ajustar la parte intracavitaria
 :::
 
 
