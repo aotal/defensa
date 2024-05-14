@@ -188,7 +188,7 @@ Volver a comentar la solución del registro vs reconstrucción directa. Hay que 
 :::
 :::
 
-La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula la fuente, así como la primera posición de parada.
+La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula , así como la primera posición de parada de la misma.
 
 ::: notes
 
@@ -703,25 +703,20 @@ Premio en Argentina
 
 ## ALFIM2016
 
-::: {layout-ncol="2"}
+::: columns
 
-::: {layout-nrow="2"}
-
+::: {.column width="50%"}
 ![](img/viena2.png){width="100%"}
 
 ![](img/viena3.jpg){width="100%"}
-
 :::
 
-::: {layout-nrow="2"}
-
+::: {.column width="50%"}
 {{< video https://www.youtube.com/embed/8CICX-2W92Q?&autoplay=1&playlist=8CICX-2W92Q&loop=1&mute=1&hl=en&answer=140174 width="130" height="220" >}}
 
 ![](img/viena1.png){width="100%"}
-
 :::
 :::
-
 
 ::: notes
 Hablar de las bolas de Auxina. Que ya se usaron en el template Benidorm
@@ -771,7 +766,21 @@ scene.show()
 Notes
 :::
 
-## AAPM2019
+## AAPM2019 I
+
+::: {layout-ncol="2"}
+
+![](img/FletcherReal3D.png){width="100%"}
+
+![](img/MRIFletcher.JPG){width="100%"}
+
+:::
+
+::: notes
+Los canales de titanio apantallan las dummies
+:::
+
+## AAPM2019 II
 
 Characterization of a Gynaecological Titanium Applicator for Direct Reconstruction on MRI
 
@@ -785,8 +794,29 @@ import trimesh
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.path import Path
-ImagenEntrada=trimesh.load('stl/Fletcher.stl')
-ImagenEntrada.show()
+#ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+IU=trimesh.load('stl/fletcher/fletcher_IU.stl')
+CR=trimesh.load('stl/fletcher/fletcher_CR.stl')
+CL=trimesh.load('stl/fletcher/fletcher_CL.stl')
+OV=trimesh.load('stl/fletcher/fletcher_OV.stl')
+support=trimesh.load('stl/fletcher/fletcher_support.stl')
+
+IC_color = [0.0, 1.0, 0.0, 1.0]
+OV_color = [1.0, 0.5, 0.0, 1.0]
+support_color = [0.0, 0.0, 1.0, 1.0]
+IU.visual.face_colors = IC_color
+CR.visual.face_colors = IC_color
+CL.visual.face_colors = IC_color
+support.visual.face_colors = support_color
+ring.visual.face_colors = ring_color
+OV.visual.face_colors = OV_color
+scene = trimesh.Scene()
+scene.add_geometry(IU)
+scene.add_geometry(CR)
+scene.add_geometry(CL)
+scene.add_geometry(OV)
+scene.add_geometry(support)
+scene.show()
 ```
 :::
 
