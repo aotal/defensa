@@ -669,13 +669,39 @@ Notes
 Notes
 :::
 
-## Material y métodos
+## Material y métodos I
 
-![](img/Preplan1.png)
+- MRI previa de 3 a 5 días antes del implante con cilindro y *template*
+- Segmentación del CTV sobre la imagen pre-plan
+- Dosimetría virtual con la propuesta de agujas
+- Implante con el listado de agujas acordado
+
+
+::: notes
+
+:::
+
+## Material y métodos II
+
+![](img/Preplan1.jpg)
+
+
+::: notes
+
+:::
 
 ## Resultados
 
+- Determinación previa de vectores y su profundidad
+- Ahorro significativo de tiempo
+- Pacientes histerectomizadas: Mínimos cambios de pre- a post-plan
+- Pacientes no operados: Cambios menores en la componente intersticial del implante, aproximadamente 5 mm en la punta de los vectores para una profundidad típica de 160 mm
+
 ## Discusión
+
+- Un implante subóptimo no puede corregirse adecuadamente
+- Estimación precisa de la profundidad, posición y número de agujas.
+- Optimización de la cobertura del CTV y minimización de dosis en los OAR.   
 
 # Publicación 3
 
@@ -687,21 +713,56 @@ Notes
 
 ## Objetivos
 
+- Revisar metodologías utilizadas por TPS comerciales para planificación en BT de cérvix con MRI
+- Planificación de tratamientos con componentes intersticiales sobre MRI exclusiva
+- Sugerencias a los especialistas sobre mejoras de los TPS desde la perspectiva del ORT y del MP
+
+## Autores y TPS Analizados
+
+### Experiencia de los Autores
+
+    - ORT y MP con amplia experiencia en braquiterapia HDR de cérvix con MRI
+    - Representan centros españoles líderes en implantes
+
+### TPS Analizados
+
+    - Brachyvision v16.0 de Varian (Varian Medical Systems, Palo Alto, CA, USA)
+    - Oncentra v4.6.2 de Elekta (Elekta AB, Estocolmo, Suecia)
+    - Sagiplan v2.2 de BEBIG (Eckert & Ziegler BEBIG GmbH, Berlín, Alemania)
 
 
-## Material y métodos
+## Metodología de Revisión y Evaluación
+
+### Metodología de Revisión
+    - Basada en experiencia clínica de los autores y demostraciones interactivas de los fabricantes
+    - Versiones probadas: últimas disponibles comercialmente, incluyendo nuevas herramientas
+     
+### Procedimiento de Evaluación
+
+    - Introducción a utilidades y herramientas de los sistemas de planificación
+    - Especialistas de los fabricantes respondieron a cuestiones clínicas
+  
+### Evaluación Sistemática
+
+    - Demostraciones basadas en cuestionario
+    - Preguntas sobre software y dispositivos externos, disponibles comercialmente o en desarrollo
+
+## Cuestionario
+
+![](img/tabla21.PNG)
+
 
 ## Resultados
 
 ## Discusión
 
-# Trabajos posteriores
+# Trabajos derivados
 
 ::: notes
 Premio en Argentina
 :::
 
-## ALFIM2016
+## ALFIM2016 I
 
 ::: columns
 
@@ -722,7 +783,7 @@ Premio en Argentina
 Hablar de las bolas de Auxina. Que ya se usaron en el template Benidorm
 :::
 
-## ALFIM2016
+## ALFIM2016 II
 
 ::: {layout-ncol="2"}
 
@@ -836,6 +897,14 @@ Hablar a futuro de intentar utilizar la AI para automatizar completamente el pro
 
 
 # Conclusiones
+
+
+::: notes
+Notes
+:::
+
+
+# Agradecimientos
 
 
 ::: notes
