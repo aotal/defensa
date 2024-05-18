@@ -25,12 +25,12 @@ jupyter: python3
 
 # Índice
 
-- Introducción
-- *Dummies*
-- Bibliotecas de aplicadores
-- Publicaciones
-- Discusión general
-- Conclusiones
+-   Introducción
+-   *Dummies*
+-   Bibliotecas de aplicadores
+-   Publicaciones
+-   Discusión general
+-   Conclusiones
 
 # Introducción
 
@@ -43,28 +43,21 @@ Notes
 ![](img/EstadisticaCCervix.jpg)
 
 ::: notes
-- Tercer cáncer más frecuente en mujeres
-- No hablaremos del resto de tumores ginecológicos, aunque son exportables algunas de la metodologías expuestas
+-   Tercer cáncer más frecuente en mujeres
+-   No hablaremos del resto de tumores ginecológicos, aunque son exportables algunas de la metodologías expuestas
 :::
-
-
-
-
 
 ## Esquema de tratamiento {auto-animate="true"}
 
- Enfermedad localmente avanzada (FIGO IB2-IV4)[^1]
-
- Radioterapia externa de la zona pélvica
-
- Quimioterapia concurrente
-
- Braquiterapia
-
+Enfermedad localmente avanzada (FIGO IB2-IV4)[^1]
 
 [^1]: Estas etapas implican una extensión más significativa del tumor, pudiendo abarcar desde lesiones visibles en el cuello uterino hasta la invasión de áreas más allá del útero, como la pared pélvica, la vagina inferior o incluso la mucosa de la vejiga o el recto (ICRU89)
 
+Radioterapia externa de la zona pélvica
 
+Quimioterapia concurrente
+
+Braquiterapia
 
 ::: notes
 Recordar que hablaremos de braquiterapia menos en el artículo 3
@@ -79,23 +72,16 @@ Braquiterapia
 ## ICRU89 {.center}
 
 ::: columns
-
 ::: {.column width="20%"}
 ![](img/logoicru.png)
 :::
 
 ::: {.column width="80%"}
-
 ### ICRU Report 89, Prescribing, Recording, and Reporting Brachytherapy for Cancer of the Cervix
-
 :::
-
 :::
-
-
 
 ::: notes
-
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -108,9 +94,7 @@ Tomografía Computarizada
 
 Resonancia Magnética Nuclear
 
-
 ::: notes
-
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -123,53 +107,44 @@ Resonancia Magnética Nuclear
 
 ## Tomografía Computarizada
 
-- El CT es una modalidad de imagen ampliamente utilizada en BT ginecológica para el tratamiento de tumores cervicales
-- Permite delinear los OAR de forma comparable a la MRI
-- Su uso está muy extendido y los Oncólogos radioterápicos están familiarizados con su interpretación.
-- Limitación es el contraste relativamente bajo de los tejidos blandos en comparación con la MRI
+-   El CT es una modalidad de imagen ampliamente utilizada en BT ginecológica para el tratamiento de tumores cervicales
+-   Permite delinear los OAR de forma comparable a la MRI
+-   Su uso está muy extendido y los Oncólogos radioterápicos están familiarizados con su interpretación.
+-   Limitación es el contraste relativamente bajo de los tejidos blandos en comparación con la MRI
 
 ::: notes
-
 :::
 
 ## Resonancia Magnética Nuclear
 
 ::: rows
-
 ::: {.row width="50%" style="display: inline-block; border: 1px solid black; padding: 5px;"}
 ![](img/MRIMandatory.png){width="70%"}
 :::
 
 ::: {.row width="50%"}
-- Las secuencias de MRI más útiles son la T2 para visualizar la anatomía y la colocación del aplicador.
-- Secuencias adicionales como la T1 con contraste o la isotrópica 3D pueden proporcionar información complementaria.
+-   Las secuencias de MRI más útiles son la T2 para visualizar la anatomía y la colocación del aplicador.
+-   Secuencias adicionales como la T1 con contraste o la isotrópica 3D pueden proporcionar información complementaria.
 :::
-
 :::
 
 ::: notes
-
 :::
 
 ## MRI vs CT: Cervix
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
+![](img/CervixCT.png){width="85%"}
 
-![](img/CervixCT.png){width=85%}
-
-![](img/CervixMR.png){width=85%}
-
+![](img/CervixMR.png){width="85%"}
 :::
-
 
 ## MRI vs CT: Aplicador
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
+![](img/CTFletcher.JPG){width="85%"}
 
-![](img/CTFletcher.JPG){width=85%}
-
-![](img/MRIFletcher.JPG){width=85%}
-
+![](img/MRIFletcher.JPG){width="85%"}
 :::
 
 ::: notes
@@ -191,12 +166,11 @@ Volver a comentar la solución del registro vs reconstrucción directa. Hay que 
 La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula , así como la primera posición de parada de la misma.
 
 ::: notes
-
 :::
 
 ## Impacto en la distribución de dosis
-::: columns
 
+::: columns
 ::: {.column width="50%"}
 ::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
 ![](img/EfectoIncertidumbrePosicionamiento.PNG){width="70%"}
@@ -206,15 +180,12 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 ::: {.column width="50%"}
 Párametros de histograma
 
-- Vejiga y recto en la dirección antero-posterior: 5%-6% por mm
-- Resto: 4% por mm 
-
-
+-   Vejiga y recto en la dirección antero-posterior: 5%-6% por mm
+-   Resto: 4% por mm
 :::
 :::
 
-
-::: {.callout-warning}
+::: callout-warning
 El D2cc del recto es el parámetro más sensible a los desplazamientos, cambiando aproximadamente un 10% por cambio de ±1.5 mm.
 :::
 
@@ -224,78 +195,66 @@ Incidir en la importancia de la reconstrucción de los aplicadores
 
 ## Modos de reconstrucción
 
-- Reconstrucción directa
-- Reconstrucción mediante bibliotecas
-- Planes híbridos
+-   Reconstrucción directa
+-   Reconstrucción mediante bibliotecas
+-   Planes híbridos
 
 ::: notes
-
 :::
 
 ## Reconstrucción directa
 
-- El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente en el sistema de referencia de la secuencia de imágenes.
+-   El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente en el sistema de referencia de la secuencia de imágenes.
 
-- Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
+-   Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
 
 ## Pros y contras de la reconstrucción directa
 
 ### Pros
 
-- Como su nombre indica es la manera más directa para reconstruir el canal de una fuente.
+-   Como su nombre indica es la manera más directa para reconstruir el canal de una fuente.
 
 ### Contras
 
-- Las trayectoria de la fuente puede no ser fácilmente identificable.
-- El espesor de corte. 
+-   Las trayectoria de la fuente puede no ser fácilmente identificable.
+-   El espesor de corte.
 
 ::: notes
-
 :::
 
 # *Dummies* en MRI
 
-
 ::: notes
-
 :::
 
 ## *Dummies* CT
 
 ::: {layout-ncol="2"}
-
 ![](img/dummies.jpg)
 
 ![](img/Dummies_bebig.jpg)
-
-
 :::
 
 ::: notes
-Hechas de materiales de Z alto
-Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto. 
+Hechas de materiales de Z alto Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto.
 :::
-
 
 ## *Dummies* MRI
 
 ::: {layout-ncol="3"}
-
 ![](img/DummiesMR_Image.jpg){width="85%"}
 
 ![](img/DummiesMR.png){width="100%"}
 
 ![](img/DummiesPepe.png){width="120%"}
-
 :::
 
-::: {.callout-note}
+::: callout-note
 No hay *dummies* comerciales en el caso de agujas.
 :::
 
 ::: notes
-Hechas de materiales con "hidrógenos"(Por la resonancia)
-Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
+Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
 :::
 
 ## *Dummies* puntuales
@@ -305,51 +264,40 @@ Al ser líquidos, problemas de contrucción. De ahí la dificultad para las aguj
 :::
 
 ::: {layout-ncol="2"}
-
 ![](img/auxina.jpg){width="50%"}
 
 ![](img/pellets1.png){width="100%"}
-
-
 :::
 
-
 ::: notes
-
 :::
 
 # Bibliotecas de aplicadores
 
 ::: notes
-
 :::
 
 ## ¿Qué son las bibliotecas de aplicadores?
 
-- El objetivo de la reconstrucción es la de encontrar la transformación lineal que ha de aplicarse a un modelo para que quede superpuesto sobre la imagen.
+-   El objetivo de la reconstrucción es la de encontrar la transformación lineal que ha de aplicarse a un modelo para que quede superpuesto sobre la imagen.
 
-- En contraposición a la reconstrucción directa, no es necesario conocer completamente la trayectoria de la fuente y la primera posición de parada.
+-   En contraposición a la reconstrucción directa, no es necesario conocer completamente la trayectoria de la fuente y la primera posición de parada.
 
-- Es útil unicamente en aplicadores rígidos
-
+-   Es útil unicamente en aplicadores rígidos
 
 ::: notes
-
 :::
 
 ## Bibliotecas de aplicadores
 
-::: {layout-nrow=2}
+::: {layout-nrow="2"}
 ### Oncentra {.row width="50%"}
 
 ![](img/biboncentra2.jpg){fig-align="center" width="40%"}
 
-
-
 ### Sagiplan {.center .row width="50%"}
 
 ::: columns
-
 ::: {.column width="50%"}
 ![](img/biblsagiplan1.jpg){fig-align="center" width="40%"}
 :::
@@ -358,16 +306,14 @@ Al ser líquidos, problemas de contrucción. De ahí la dificultad para las aguj
 ![](img/biblsagiplan2.jpg){fig-align="center" width="30%"}
 :::
 :::
-
 :::
 
 ::: notes
-
 :::
-
 
 ## Transformaciones lineales
 
+```{=tex}
 \begin{align}
 
 P=
@@ -395,7 +341,8 @@ t_{z} \\
 \end{pmatrix}
 
 \end{align}
-
+```
+```{=tex}
 \begin{align}
 
 P_1 P_2=
@@ -414,7 +361,8 @@ R_1 R_2 & R1 \vec{t_2}+ \vec{t_1}\\
 
 
 \end{align}
-
+```
+```{=tex}
 \begin{align}
 
 R R^T=\mathbb{I}
@@ -428,9 +376,8 @@ R^T &  -R^{T}\vec{t}\\
 \end{pmatrix}
 
 \end{align}
-
+```
 ::: notes
-
 :::
 
 ## Ejemplo de esquema del aplicador
@@ -448,10 +395,10 @@ graph TD;
 
 ## Equivalencia en la Biblioteca
 
-::: {layout-nrow=2}
+::: {layout-nrow="2"}
 ### Oncentra
 
-```XML
+``` xml
 <connector name="OVOIDRI">
   <centerPoint x="39.2329311043" y="-8.287564434702" z="264.9381801444" />
   <axisDirection x="-0.08682408883347" y="0.8660254037844" z="-0.4924038765061" />
@@ -459,9 +406,9 @@ graph TD;
 </connector>
 ```
 
-### Sagiplan 
+### Sagiplan
 
-```XML
+``` xml
 <Applicator>
 [...]
   <Matrix>
@@ -478,7 +425,6 @@ graph TD;
 :::
 
 ::: notes
-
 :::
 
 ## Piezas sin transformación
@@ -529,7 +475,6 @@ scene.add_geometry(OD)
 scene.show()
 ```
 
-
 # Publicación 1
 
 ![](img/librerias-1.png)
@@ -540,9 +485,7 @@ Notes
 
 ## Objetivos
 
-
 ::: columns
-
 ::: {.column width="50%"}
 ![](img/utrecht.jpg){fig-align="center" width="100%"}
 :::
@@ -551,7 +494,6 @@ Notes
 ![](img/TB_bg.png){fig-align="center" width="100%"}
 :::
 :::
-
 
 ## Material y métodos I
 
@@ -569,45 +511,38 @@ scene.add_geometry(ND)
 scene.show()
 ```
 
-
 ## Material y métodos II
 
-::: {layout-nrow=2}
-![](img/freecad_tb1.png){width=100%}
+::: {layout-nrow="2"}
+![](img/freecad_tb1.png){width="100%"}
 
-![](img/freecad_tb2.png){width=50%}
+![](img/freecad_tb2.png){width="50%"}
 
-![](img/freecad_tb3.png){width=75%}
+![](img/freecad_tb3.png){width="75%"}
 
 ![](img/freecad_logo.png)
 :::
-
 
 ## Material y métodos III
 
 {{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
 
-
 ## Resultados I
 
 ::: columns
-
-::: {.column width=50%}
+::: {.column width="50%"}
 ![](img/utrecht_virtual.jpg)
 :::
 
-::: {.column width=50%}
+::: {.column width="50%"}
 ![](img/benidorm_virtual.png)
 :::
-
 :::
 
-## Resultados II 
+## Resultados II
 
 ::: columns
-
 ::: {.column width="50%"}
-
 ### Utrecht
 
 ```{mermaid}
@@ -628,7 +563,6 @@ graph TD;
 :::
 
 ::: {.column width="50%"}
-
 ### Benidorm
 
 ```{mermaid}
@@ -645,13 +579,12 @@ graph TD;
 :::
 :::
 
-
 ## Discusión
 
-- El método agiliza la reconstrucción de las agujas ya que se apoya en la parte intracavitaria
-- El orificio de salida de la aguja en el ovoide permanece invariante y solamente se ha de hacer giros alrededor del mismo
-- Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvándola sobre dicho plano
-- La colocación del aplicador Benidorm queda perfectamente determinado con los *pellets* de vitamina E.  
+-   El método agiliza la reconstrucción de las agujas ya que se apoya en la parte intracavitaria
+-   El orificio de salida de la aguja en el ovoide permanece invariante y solamente se ha de hacer giros alrededor del mismo
+-   Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvándola sobre dicho plano
+-   La colocación del aplicador Benidorm queda perfectamente determinado con los *pellets* de vitamina E.
 
 # Publicación 2
 
@@ -671,37 +604,33 @@ Notes
 
 ## Material y métodos I
 
-- MRI previa de 3 a 5 días antes del implante con cilindro y *template*
-- Segmentación del CTV sobre la imagen pre-plan
-- Dosimetría virtual con la propuesta de agujas
-- Implante con el listado de agujas acordado
-
+-   MRI previa de 3 a 5 días antes del implante con cilindro y *template*
+-   Segmentación del CTV sobre la imagen pre-plan
+-   Dosimetría virtual con la propuesta de agujas
+-   Implante con el listado de agujas acordado
 
 ::: notes
-
 :::
 
 ## Material y métodos II
 
 ![](img/Preplan1.jpg)
 
-
 ::: notes
-
 :::
 
 ## Resultados
 
-- Determinación previa de vectores y su profundidad
-- Ahorro significativo de tiempo
-- Pacientes histerectomizadas: Mínimos cambios de pre- a post-plan
-- Pacientes no operados: Cambios menores en la componente intersticial del implante, aproximadamente 5 mm en la punta de los vectores para una profundidad típica de 160 mm
+-   Determinación previa de vectores y su profundidad
+-   Ahorro significativo de tiempo
+-   Pacientes histerectomizadas: Mínimos cambios de pre- a post-plan
+-   Pacientes no operados: Cambios menores en la componente intersticial del implante, aproximadamente 5 mm en la punta de los vectores para una profundidad típica de 160 mm
 
 ## Discusión
 
-- Un implante subóptimo no puede corregirse adecuadamente
-- Estimación precisa de la profundidad, posición y número de agujas.
-- Optimización de la cobertura del CTV y minimización de dosis en los OAR.   
+-   Un implante subóptimo no puede corregirse adecuadamente
+-   Estimación precisa de la profundidad, posición y número de agujas.
+-   Optimización de la cobertura del CTV y minimización de dosis en los OAR.
 
 # Publicación 3
 
@@ -713,48 +642,78 @@ Notes
 
 ## Objetivos
 
-- Revisar metodologías utilizadas por TPS comerciales para planificación en BT de cérvix con MRI
-- Planificación de tratamientos con componentes intersticiales sobre MRI exclusiva
-- Sugerencias a los especialistas sobre mejoras de los TPS desde la perspectiva del ORT y del MP
+-   Revisar metodologías utilizadas por TPS comerciales para planificación en BT de cérvix con MRI
+-   Planificación de tratamientos con componentes intersticiales sobre MRI exclusiva
+-   Sugerencias a los especialistas sobre mejoras de los TPS desde la perspectiva del ORT y del MP
 
 ## Autores y TPS Analizados
 
 ### Experiencia de los Autores
 
-    - ORT y MP con amplia experiencia en braquiterapia HDR de cérvix con MRI
-    - Representan centros españoles líderes en implantes
+```         
+- ORT y MP con amplia experiencia en braquiterapia HDR de cérvix con MRI
+- Representan centros españoles líderes en implantes
+```
 
 ### TPS Analizados
 
-    - Brachyvision v16.0 de Varian (Varian Medical Systems, Palo Alto, CA, USA)
-    - Oncentra v4.6.2 de Elekta (Elekta AB, Estocolmo, Suecia)
-    - Sagiplan v2.2 de BEBIG (Eckert & Ziegler BEBIG GmbH, Berlín, Alemania)
-
+```         
+- Brachyvision v16.0 de Varian (Varian Medical Systems, Palo Alto, CA, USA)
+- Oncentra v4.6.2 de Elekta (Elekta AB, Estocolmo, Suecia)
+- Sagiplan v2.2 de BEBIG (Eckert & Ziegler BEBIG GmbH, Berlín, Alemania)
+```
 
 ## Metodología de Revisión y Evaluación
 
 ### Metodología de Revisión
-    - Basada en experiencia clínica de los autores y demostraciones interactivas de los fabricantes
-    - Versiones probadas: últimas disponibles comercialmente, incluyendo nuevas herramientas
-     
+
+```         
+- Basada en experiencia clínica de los autores y demostraciones interactivas de los fabricantes
+- Versiones probadas: últimas disponibles comercialmente, incluyendo nuevas herramientas
+ 
+```
+
 ### Procedimiento de Evaluación
 
-    - Introducción a utilidades y herramientas de los sistemas de planificación
-    - Especialistas de los fabricantes respondieron a cuestiones clínicas
-  
+```         
+- Introducción a utilidades y herramientas de los sistemas de planificación
+- Especialistas de los fabricantes respondieron a cuestiones clínicas
+```
+
 ### Evaluación Sistemática
 
-    - Demostraciones basadas en cuestionario
-    - Preguntas sobre software y dispositivos externos, disponibles comercialmente o en desarrollo
+```         
+- Demostraciones basadas en cuestionario
+- Preguntas sobre software y dispositivos externos, disponibles comercialmente o en desarrollo
+```
 
 ## Cuestionario
 
 ![](img/tabla21.PNG)
 
+## Resultados I
 
-## Resultados
+-   Ningún TPS permite retirar anillos u ovoides de la MRI.
+-   Se necesita mejorar el algoritmo de posicionamiento automático en MRI.
+-   Métodos basados en free length para mejorar la reconstrucción.
 
-## Discusión
+## Resultados II
+
+-   Proceso iterativo de optimización necesita integración en TPS.
+-   Importancia de sumar contribuciones de EBRT y BT en EQD2.
+-   Algoritmos de registro deformable necesitan desarrollo adicional.
+
+## Discusión: Herramientas avanzadas
+
+-   Velocity (Varian Medical Systems): herramientas avanzadas para registro de imágenes y suma de dosis.
+-   Redes Neuronales Convolucionales: potencial para automatizar segmentación de volúmenes clínicos y OAR.
+-   CT Sintéticos: generación a partir de MRI para segmentar tumores y OAR, obtener densidades electrónicas para cálculo de dosis.
+
+## Discusión: Reconstrucción de aplicadores
+
+-   Sistemas de Seguimiento Electromagnético: verificación de la trayectoria de la fuente de BT.
+-   Reconstrucción Semiautomatizada de Catéteres
+-   Algoritmos de Aprendizaje Profundo: investigados para la HDR ginecológica basada en MRI.
 
 # Trabajos derivados
 
@@ -765,7 +724,6 @@ Premio en Argentina
 ## ALFIM2016 I
 
 ::: columns
-
 ::: {.column width="50%"}
 ![](img/viena2.png){width="100%"}
 
@@ -786,9 +744,7 @@ Hablar de las bolas de Auxina. Que ya se usaron en el template Benidorm
 ## ALFIM2016 II
 
 ::: {layout-ncol="2"}
-
-![](img/VienaPellets1.JPG){width="100%"}
-![](img/VienaPellets2.JPG){width="100%"}
+![](img/VienaPellets1.JPG){width="100%"} ![](img/VienaPellets2.JPG){width="100%"}
 
 ```{python}
 import trimesh
@@ -815,13 +771,7 @@ scene.add_geometry(needles)
 scene.add_geometry(ring)
 scene.show()
 ```
-
 :::
-
-
-
-
-
 
 ::: notes
 Notes
@@ -830,11 +780,9 @@ Notes
 ## AAPM2019 I
 
 ::: {layout-ncol="2"}
-
 ![](img/FletcherReal3D.png){width="100%"}
 
 ![](img/MRIFletcher.JPG){width="100%"}
-
 :::
 
 ::: notes
@@ -846,9 +794,7 @@ Los canales de titanio apantallan las dummies
 Characterization of a Gynaecological Titanium Applicator for Direct Reconstruction on MRI
 
 ::: {layout-ncol="2"}
-![](img/D3.png){width="100%"}
-![](img/D2.png){width="100%"}
-
+![](img/D3.png){width="100%"} ![](img/D2.png){width="100%"}
 
 ```{python}
 import trimesh
@@ -895,17 +841,32 @@ A novel tool for the reconstruction of the Utrecht applicator on MRI
 Hablar a futuro de intentar utilizar la AI para automatizar completamente el proceso y obviar la parte de ajustar la parte intracavitaria
 :::
 
-
 # Conclusiones
-
 
 ::: notes
 Notes
 :::
 
+## Conclusiones I
 
-# Agradecimientos
+-   El uso de bibliotecas de aplicadores es una herramienta útil para la reconstrucción sobre MRI, incluyendo la determinación precisa de la *tip-position* y la reconstrucción de la parte intersticial.
+-   Las bibliotecas de aplicadores se pueden extender a aplicadores que no son completamente rígidos.
+-   Los planes virtuales creados con bibliotecas de aplicadores permiten el diseño de planes que optimicen la cobertura de volúmenes blanco y la protección de los OAR.
 
+::: notes
+Notes
+:::
+
+## Conclusiones II
+
+-   El uso de *dummies* puede utilizarse no solo para señalar los canales sino como ayuda para posicionar el aplicador.
+-   Las herramientas caseras desarrolladas por usuarios pueden inspirar mejoras en los TPS comerciales.
+
+::: notes
+Notes
+:::
+
+# Gracias por su atención
 
 ::: notes
 Notes
