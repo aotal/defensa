@@ -29,7 +29,7 @@ jupyter: python3
 -   *Dummies*
 -   Bibliotecas de aplicadores
 -   Publicaciones
--   Discusión general
+-   Trabajos derivados
 -   Conclusiones
 
 # Introducción
@@ -43,7 +43,7 @@ Notes
 ![](img/EstadisticaCCervix.jpg)
 
 ::: notes
--   Tercer cáncer más frecuente en mujeres
+-   Tercer cáncer más frecuente en mujeres y el ginecológico más frecuente
 -   No hablaremos del resto de tumores ginecológicos, aunque son exportables algunas de la metodologías expuestas
 :::
 
@@ -60,7 +60,7 @@ Quimioterapia concurrente
 Braquiterapia
 
 ::: notes
-Recordar que hablaremos de braquiterapia menos en el artículo 3
+Recordar que hablaremos de braquiterapia menos en el artículo 3 que pasaremos por encima en el caso de sumar las dosis de externa y BT
 :::
 
 ## Esquema de tratamiento {auto-animate="true"}
@@ -70,6 +70,7 @@ Braquiterapia
 :::
 
 ## ICRU89 {.center}
+
 
 ::: columns
 ::: {.column width="20%"}
@@ -81,7 +82,20 @@ Braquiterapia
 :::
 :::
 
+<hr>
+
+::: columns
+::: {.column width="20%"}
+![](img/fismed.png)
+:::
+
+::: {.column width="80%"}
+### Consideraciones prácticas en la implementación de la Resonancia Magnética en la planificación en braquiterapia ginecológica de cérvix
+:::
+:::
+
 ::: notes
+Recordar el trabajo del grupo de la SEFM
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -171,6 +185,7 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 ## Impacto en la distribución de dosis
 
 ::: columns
+
 ::: {.column width="50%"}
 ::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
 ![](img/EfectoIncertidumbrePosicionamiento.PNG){width="70%"}
@@ -192,6 +207,7 @@ El D2cc del recto es el parámetro más sensible a los desplazamientos, cambiand
 ::: notes
 Incidir en la importancia de la reconstrucción de los aplicadores
 :::
+
 
 ## Modos de reconstrucción
 
@@ -511,6 +527,10 @@ scene.add_geometry(ND)
 scene.show()
 ```
 
+::: notes
+Hubo que crear una aguja
+:::
+
 ## Material y métodos II
 
 ::: {layout-nrow="2"}
@@ -583,7 +603,7 @@ graph TD;
 
 -   El método agiliza la reconstrucción de las agujas ya que se apoya en la parte intracavitaria
 -   El orificio de salida de la aguja en el ovoide permanece invariante y solamente se ha de hacer giros alrededor del mismo
--   Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvándola sobre dicho plano
+-   Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvarla sobre dicho plano
 -   La colocación del aplicador Benidorm queda perfectamente determinado con los *pellets* de vitamina E.
 
 # Publicación 2
