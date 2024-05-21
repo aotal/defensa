@@ -38,7 +38,7 @@ jupyter: python3
 Notes
 :::
 
-## Cáncer de cuello uterino
+## Cáncer de cuello uterino {.center}
 
 ![](img/EstadisticaCCervix.jpg)
 
@@ -47,11 +47,11 @@ Notes
 -   No hablaremos del resto de tumores ginecológicos, aunque son exportables algunas de la metodologías expuestas
 :::
 
-## Esquema de tratamiento {auto-animate="true"}
+## Esquema de tratamiento { auto-animate="true"}
 
-Enfermedad localmente avanzada (FIGO IB2-IV4)[^1]
+- Enfermedad localmente avanzada (FIGO IB2-IV4)[^1]
 
-[^1]: Estas etapas implican una extensión más significativa del tumor, pudiendo abarcar desde lesiones visibles en el cuello uterino hasta la invasión de áreas más allá del útero, como la pared pélvica, la vagina inferior o incluso la mucosa de la vejiga o el recto (ICRU89)
+### Fases de tratamiento
 
 Radioterapia externa de la zona pélvica
 
@@ -61,6 +61,11 @@ Braquiterapia
 
 ::: notes
 Recordar que hablaremos de braquiterapia menos en el artículo 3 que pasaremos por encima en el caso de sumar las dosis de externa y BT
+:::
+
+::: aside
+[^1]: Estas etapas implican una extensión significativa del tumor, pudiendo abarcar desde lesiones visibles en el cuello uterino hasta la invasión de áreas más allá del útero, como la pared pélvica, la vagina inferior o incluso la mucosa de la vejiga o el recto (ICRU89)
+
 :::
 
 ## Esquema de tratamiento {auto-animate="true"}
@@ -182,31 +187,7 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 ::: notes
 :::
 
-## Impacto en la distribución de dosis
 
-::: columns
-
-::: {.column width="50%"}
-::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
-![](img/EfectoIncertidumbrePosicionamiento.PNG){width="70%"}
-:::
-:::
-
-::: {.column width="50%"}
-Párametros de histograma
-
--   Vejiga y recto en la dirección antero-posterior: 5%-6% por mm
--   Resto: 4% por mm
-:::
-:::
-
-::: callout-warning
-El D2cc del recto es el parámetro más sensible a los desplazamientos, cambiando aproximadamente un 10% por cambio de ±1.5 mm.
-:::
-
-::: notes
-Incidir en la importancia de la reconstrucción de los aplicadores
-:::
 
 
 ## Modos de reconstrucción
@@ -223,6 +204,60 @@ Incidir en la importancia de la reconstrucción de los aplicadores
 -   El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente en el sistema de referencia de la secuencia de imágenes.
 
 -   Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
+
+```{python}
+from IPython.display import display, HTML
+
+html_content = """
+<div id="player"></div>
+
+<script>
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "280",
+    width: "500",
+    videoId: "hXDZ8aUN9-A",
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+      playlist: "hXDZ8aUN9-A",
+      mute: 1
+    },
+    events: {
+      "onReady": onPlayerReady,
+      "onStateChange": onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.seekTo(30);
+  event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    setTimeout(checkTime, 1000);
+  }
+}
+
+function checkTime() {
+  if (player.getCurrentTime() >= 52) {
+    player.seekTo(30);
+  } else {
+    setTimeout(checkTime, 1000);
+  }
+}
+</script>
+"""
+display(HTML(html_content))
+```
 
 ## Pros y contras de la reconstrucción directa
 
@@ -241,6 +276,7 @@ Incidir en la importancia de la reconstrucción de los aplicadores
 # *Dummies* en MRI
 
 ::: notes
+
 :::
 
 ## *Dummies* CT
