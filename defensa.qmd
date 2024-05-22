@@ -55,7 +55,8 @@ def embed_youtube(div_id, video_id, start, end, width=500, height=280, autoplay=
                 autoplay: {autoplay},
                 loop: 1,
                 playlist: video_id,
-                mute: {mute}
+                mute: {mute},
+                iv_load_policy: 3,
             }},
             events: {{
                 'onReady': function(event) {{
@@ -265,7 +266,7 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 -   Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
 
 ```{python}
-embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5)
+embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280, autoplay=1, mute=1, playback_speed=2)
 ```
 
 
@@ -589,6 +590,7 @@ Hubo que crear una aguja
 ## Material y métodos III
 
 {{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
+
 
 ## Resultados I
 
