@@ -25,6 +25,65 @@ jupyter: python3
 
 # Índice
 
+```{python}
+from IPython.display import display, HTML
+
+def embed_youtube(div_id, video_id, start, end, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5):
+    html_content = f"""
+    <div id="{div_id}"></div>
+
+    <script>
+    if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {{
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        window.onYouTubeIframeAPIReady = function() {{
+            createPlayer("{div_id}", "{video_id}", {start}, {end}, {playback_speed});
+        }};
+    }} else {{
+        createPlayer("{div_id}", "{video_id}", {start}, {end}, {playback_speed});
+    }}
+
+    function createPlayer(div_id, video_id, start, end, playback_speed) {{
+        new YT.Player(div_id, {{
+            height: '{height}',
+            width: '{width}',
+            videoId: video_id,
+            playerVars: {{
+                autoplay: {autoplay},
+                loop: 1,
+                playlist: video_id,
+                mute: {mute}
+            }},
+            events: {{
+                'onReady': function(event) {{
+                    event.target.setPlaybackRate(playback_speed);
+                    event.target.seekTo(start);
+                    event.target.playVideo();
+                }},
+                'onStateChange': function(event) {{
+                    if (event.data == YT.PlayerState.PLAYING) {{
+                        checkTime(event.target, start, end);
+                    }}
+                }}
+            }}
+        }});
+    }}
+
+    function checkTime(player, start, end) {{
+        if (player.getCurrentTime() >= end) {{
+            player.seekTo(start);
+        }} else {{
+            setTimeout(function() {{ checkTime(player, start, end); }}, 1000);
+        }}
+    }}
+    </script>
+    """
+    display(HTML(html_content))
+```
+
 -   Introducción
 -   *Dummies*
 -   Bibliotecas de aplicadores
@@ -206,65 +265,6 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 -   Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
 
 ```{python}
-from IPython.display import display, HTML
-
-def embed_youtube(div_id, video_id, start, end, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5):
-    html_content = f"""
-    <div id="{div_id}"></div>
-
-    <script>
-    if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {{
-        var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    }}
-
-    function onYouTubeIframeAPIReady() {{
-        createPlayer("{div_id}", "{video_id}");
-    }}
-
-    function createPlayer(div_id, video_id) {{
-        new YT.Player(div_id, {{
-            height: '{height}',
-            width: '{width}',
-            videoId: video_id,
-            playerVars: {{
-                autoplay: {autoplay},
-                loop: 1,
-                playlist: video_id,
-                mute: {mute}
-            }},
-            events: {{
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }}
-        }});
-    }}
-
-    function onPlayerReady(event) {{
-        event.target.seekTo({start});
-        event.target.playVideo();
-        event.target.setPlaybackRate({playback_speed});
-    }}
-
-    function onPlayerStateChange(event) {{
-        if (event.data == YT.PlayerState.PLAYING) {{
-            checkTime(event.target);
-        }}
-    }}
-
-    function checkTime(player) {{
-        if (player.getCurrentTime() >= {end}) {{
-            player.seekTo({start});
-        }} else {{
-            setTimeout(() => checkTime(player), 1000);
-        }}
-    }}
-    </script>
-    """
-    display(HTML(html_content))
-
 embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5)
 ```
 
@@ -589,9 +589,7 @@ Hubo que crear una aguja
 ## Material y métodos III
 
 ```{python}
-
-
-embed_youtube("player1", "AhJ1L-rfLtY", start=30, end=52, width=1100, height=600, autoplay=1, mute=1, playback_speed=1.5)
+embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5)
 ```
 
 ## Material y métodos III (Reserva)
