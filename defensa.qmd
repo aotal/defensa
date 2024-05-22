@@ -588,12 +588,6 @@ Hubo que crear una aguja
 
 ## Material y métodos III
 
-```{python}
-embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280, autoplay=1, mute=1, playback_speed=1.5)
-```
-
-## Material y métodos III (Reserva)
-
 {{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
 
 ## Resultados I
