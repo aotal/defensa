@@ -121,7 +121,7 @@ Quimioterapia concurrente
 Braquiterapia
 
 ::: notes
-Recordar que hablaremos de braquiterapia menos en el artículo 3 que pasaremos por encima en el caso de sumar las dosis de externa y BT
+Recordar que hablaremos de braquiterapia excepto en el artículo 3 que pasaremos por encima en el caso de sumar las dosis de externa y BT
 :::
 
 ::: aside
@@ -161,7 +161,7 @@ Braquiterapia
 :::
 
 ::: notes
-Recordar el trabajo del grupo de la SEFM
+Hablar de que el ICRU89 es el documento heredero de las recomendaciones de GEC-ESTRO. Recordar el trabajo del grupo de la SEFM
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -175,6 +175,7 @@ Tomografía Computarizada
 Resonancia Magnética Nuclear
 
 ::: notes
+Solamente imagen en 3D. Aunque los US son una modalidad prometedora no es la estándar.
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -193,6 +194,7 @@ Resonancia Magnética Nuclear
 -   Limitación es el contraste relativamente bajo de los tejidos blandos en comparación con la MRI
 
 ::: notes
+Hablar también del tiempo de exploración.Artefactos de movimiento no.
 :::
 
 ## Resonancia Magnética Nuclear
@@ -209,6 +211,7 @@ Resonancia Magnética Nuclear
 :::
 
 ::: notes
+Hablar de la disponibilidad. Modalidad de imagen para la zona pélvica.
 :::
 
 ## MRI vs CT: Cervix
@@ -217,6 +220,10 @@ Resonancia Magnética Nuclear
 ![](img/CervixCT.png){width="85%"}
 
 ![](img/CervixMR.png){width="85%"}
+:::
+
+::: notes
+Se aprecia el cérvix, en el CT no. Aumento del volumen segmentado. Dificulad en la BT adaptativa con CT.
 :::
 
 ## MRI vs CT: Aplicador
@@ -229,6 +236,7 @@ Resonancia Magnética Nuclear
 
 ::: notes
 Volver a comentar la solución del registro vs reconstrucción directa. Hay que recordar que la adquisición de imágenes no se hace en el mismo lugar ni al mismo tiempo.
+Aplicadores de titanio, apantallamiento del canal.
 :::
 
 ## ¿Qué es la reconstrucción de aplicadores?
@@ -246,6 +254,7 @@ Volver a comentar la solución del registro vs reconstrucción directa. Hay que 
 La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula , así como la primera posición de parada de la misma.
 
 ::: notes
+Colocamos las posiciones de la fuente sobre la imagen. Manualmente o por otros métodos.
 :::
 
 
@@ -262,7 +271,7 @@ La reconstrucción del aplicador es el proceso de identificar con precisión la 
 
 ## Reconstrucción directa
 
--   El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente en el sistema de referencia de la secuencia de imágenes.
+-   El objetivo es encontrar el conjunto discreto de puntos de parada de la fuente sobre la secuencia de imágenes.
 
 -   Por otro lado, hemos de hacer corresponder univocamente dichas coordenadas a un parámetro de longitud.
 
@@ -275,7 +284,7 @@ embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280,
 
 ### Pros
 
--   Como su nombre indica es la manera más directa para reconstruir el canal de una fuente.
+-   Se identifican directamente los puntos de parada sobre la imagen.
 
 ### Contras
 
@@ -314,7 +323,7 @@ No hay *dummies* comerciales en el caso de agujas.
 :::
 
 ::: notes
-Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
+Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, problemas de contrucción de dummies de canal. De ahí la dificultad para las agujas.
 :::
 
 ## *Dummies* puntuales
@@ -330,6 +339,7 @@ Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, prob
 :::
 
 ::: notes
+Colocamos el Template mediante las bolas. En CT se ve el template perfectamente, no en el caso de la MRI.
 :::
 
 # Bibliotecas de aplicadores
@@ -371,6 +381,7 @@ Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, prob
 :::
 
 ::: notes
+Varian lo tiene pero no he trabajado con el sistema. Aunque seguro que está diseñado de una manera parecida.
 :::
 
 ## Transformaciones lineales
@@ -440,6 +451,7 @@ R^T &  -R^{T}\vec{t}\\
 \end{align}
 ```
 ::: notes
+Explicar muy por encima el algebra de transformaciones. Recordar que se han desarrollado mucho los cálculos algebraicos sobre sistemas informáticos. AI.
 :::
 
 ## Ejemplo de esquema del aplicador
@@ -454,6 +466,10 @@ graph TD;
     id2_1--OVOIDRI-->id3_1_4(Ovoide<br>derecho)
     id2_3--OVOIDRI-->id3_3_4(Ovoide<br>izquierdo)
 ```
+
+::: notes
+Nodos y transiciones. Las transiciones las transformaciones. Los nodos las piezas.
+:::
 
 ## Equivalencia en la Biblioteca
 
@@ -514,6 +530,10 @@ scene.add_geometry(OD)
 scene.show()
 ```
 
+::: notes
+Hacer notar que la configuración de un aplicador puede hacer que lo de aplicador rígido no sea tan importante si conseguimos identificar la configuración del aplicador
+:::
+
 ## Modelo completo
 
 ```{python}
@@ -560,6 +580,9 @@ Notes
 
 ## Material y métodos I
 
+
+::: columns
+::: {.column width="50%"}
 ```{python}
 import trimesh
 import numpy as np
@@ -573,9 +596,19 @@ scene = trimesh.Scene()
 scene.add_geometry(ND)
 scene.show()
 ```
+:::
+
+::: {.column width="50%"}
+![](img/Utrecht_tool1.png){fig-align="center" width="100%"}
+
+![](img/Utrecht_tool2.png){fig-align="center" width="100%"}
+:::
+:::
+
+
 
 ::: notes
-Hubo que crear una aguja
+Hubo que crear una aguja. Utilizamos el concepto del free-length
 :::
 
 ## Material y métodos II
@@ -883,6 +916,14 @@ scene.show()
 
 ::: notes
 Explicar el intento de parametrizar el aplicador para convertirlo en rígido. Volver sobre el concepto de semirígidos.
+:::
+
+## AAPM2019 III
+
+![](img/fletcher1.png)
+
+::: notes
+Convertir lo no rígido en rígido.
 :::
 
 ## ABS2021
