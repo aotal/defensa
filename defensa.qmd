@@ -161,7 +161,9 @@ Braquiterapia
 :::
 
 ::: notes
-Hablar de que el ICRU89 es el documento heredero de las recomendaciones de GEC-ESTRO. Recordar el trabajo del grupo de la SEFM
+Hablar de que el ICRU89 es el documento heredero de las recomendaciones de GEC-ESTRO. 
+
+Recordar el trabajo del grupo de la SEFM
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -175,7 +177,9 @@ Tomografía Computarizada
 Resonancia Magnética Nuclear
 
 ::: notes
-Solamente imagen en 3D. Aunque los US son una modalidad prometedora no es la estándar.
+Solamente imagen en 3D. 
+
+Aunque los US son una modalidad prometedora no es la estándar.
 :::
 
 ## Imagen en BT de cérvix {auto-animate="true"}
@@ -194,7 +198,9 @@ Resonancia Magnética Nuclear
 -   Limitación es el contraste relativamente bajo de los tejidos blandos en comparación con la MRI
 
 ::: notes
-Hablar también del tiempo de exploración.Artefactos de movimiento no.
+Hablar también del tiempo de exploración.
+
+Artefactos de movimiento no.
 :::
 
 ## Resonancia Magnética Nuclear
@@ -211,7 +217,9 @@ Hablar también del tiempo de exploración.Artefactos de movimiento no.
 :::
 
 ::: notes
-Hablar de la disponibilidad. Modalidad de imagen para la zona pélvica.
+Hablar de la disponibilidad. 
+
+Modalidad de imagen para la zona pélvica.
 :::
 
 ## MRI vs CT: Cervix
@@ -223,7 +231,11 @@ Hablar de la disponibilidad. Modalidad de imagen para la zona pélvica.
 :::
 
 ::: notes
-Se aprecia el cérvix, en el CT no. Aumento del volumen segmentado. Dificulad en la BT adaptativa con CT.
+Se aprecia el cérvix, en el CT no. 
+
+Aumento del volumen segmentado del CTV en CT.
+
+Dificultad en la BT adaptativa con CT.
 :::
 
 ## MRI vs CT: Aplicador
@@ -235,7 +247,10 @@ Se aprecia el cérvix, en el CT no. Aumento del volumen segmentado. Dificulad en
 :::
 
 ::: notes
-Volver a comentar la solución del registro vs reconstrucción directa. Hay que recordar que la adquisición de imágenes no se hace en el mismo lugar ni al mismo tiempo.
+Volver a comentar la solución del registro vs reconstrucción directa. 
+
+Hay que recordar que la adquisición de imágenes no se hace en el mismo lugar ni al mismo tiempo.
+
 Aplicadores de titanio, apantallamiento del canal.
 :::
 
@@ -254,7 +269,9 @@ Aplicadores de titanio, apantallamiento del canal.
 La reconstrucción del aplicador es el proceso de identificar con precisión la ruta de la fuente dentro de los canales por donde circula , así como la primera posición de parada de la misma.
 
 ::: notes
-Colocamos las posiciones de la fuente sobre la imagen. Manualmente o por otros métodos.
+Colocamos las posiciones de la fuente sobre la imagen. 
+
+Manualmente o por otros métodos.
 :::
 
 
@@ -292,6 +309,7 @@ embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280,
 -   El espesor de corte.
 
 ::: notes
+Decir que al formar la trayectoria de la fuente pueden afectar los artefactos de movimiento
 :::
 
 # *Dummies* en MRI
@@ -305,7 +323,9 @@ embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280,
 :::
 
 ::: notes
-Hechas de materiales de Z alto Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto.
+Hechas de materiales de Z alto Son muy habituales y están codificadas para ver el primer punto de parada. 
+
+Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto.
 :::
 
 ## *Dummies* MRI
@@ -323,7 +343,11 @@ No hay *dummies* comerciales en el caso de agujas.
 :::
 
 ::: notes
-Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, problemas de contrucción de dummies de canal. De ahí la dificultad para las agujas.
+Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, problemas de contrucción de dummies de canal. 
+
+De ahí la dificultad para las agujas.
+
+Límite constructivo por el diámetro de la fuente
 :::
 
 ## *Dummies* puntuales
@@ -339,7 +363,9 @@ Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, prob
 :::
 
 ::: notes
-Colocamos el Template mediante las bolas. En CT se ve el template perfectamente, no en el caso de la MRI.
+Colocamos el Template mediante las bolas. 
+
+En CT se ve el template perfectamente, no en el caso de la MRI.
 :::
 
 # Bibliotecas de aplicadores
@@ -358,6 +384,7 @@ Colocamos el Template mediante las bolas. En CT se ve el template perfectamente,
 :::
 
 ::: notes
+Pasamos de querer un conjunto de puntos a una transformación lineal que nos ligue el origen de la MRI/CT y la posición del aplicador
 :::
 
 ## Bibliotecas de aplicadores
@@ -381,7 +408,9 @@ Colocamos el Template mediante las bolas. En CT se ve el template perfectamente,
 :::
 
 ::: notes
-Varian lo tiene pero no he trabajado con el sistema. Aunque seguro que está diseñado de una manera parecida.
+Varian lo tiene pero no he trabajado con el sistema. 
+
+Aunque seguro que está diseñado de una manera parecida.
 :::
 
 ## Transformaciones lineales
@@ -451,7 +480,9 @@ R^T &  -R^{T}\vec{t}\\
 \end{align}
 ```
 ::: notes
-Explicar muy por encima el algebra de transformaciones. Recordar que se han desarrollado mucho los cálculos algebraicos sobre sistemas informáticos. AI.
+Explicar muy por encima el algebra de transformaciones. 
+
+Recordar que se han desarrollado mucho los cálculos algebraicos sobre sistemas informáticos. AI.
 :::
 
 ## Ejemplo de esquema del aplicador
@@ -468,7 +499,13 @@ graph TD;
 ```
 
 ::: notes
-Nodos y transiciones. Las transiciones las transformaciones. Los nodos las piezas.
+Nodos y transiciones. 
+
+Las transiciones las transformaciones. 
+
+Los nodos las piezas. Intentemos ponernos en el lugar del diseñador de elementos. 
+
+Él tomará en origen de la pieza donde le convenga
 :::
 
 ## Equivalencia en la Biblioteca
@@ -578,6 +615,11 @@ Notes
 :::
 :::
 
+::: notes
+Partimos de modelos sin agujas y se las queremos añadir. 
+
+No estaba presente la idea de modificar el aplicador. Ponernos en que estamos en 2017
+:::
 ## Material y métodos I
 
 
@@ -608,7 +650,9 @@ scene.show()
 
 
 ::: notes
-Hubo que crear una aguja. Utilizamos el concepto del free-length
+Hubo que crear una aguja. 
+
+Utilizamos el concepto del free-length
 :::
 
 ## Material y métodos II
@@ -623,6 +667,9 @@ Hubo que crear una aguja. Utilizamos el concepto del free-length
 ![](img/freecad_logo.png)
 :::
 
+::: notes
+Recordar que no había modelo del TB
+:::
 
 ## Resultados I
 
@@ -687,6 +734,10 @@ graph TD;
 -   Puede haber una pequeña curvatura de la aguja, en el caso del Utrecht, pero se puede buscando el plano que contiene a la aguja y curvarla sobre dicho plano
 -   La colocación del aplicador Benidorm queda perfectamente determinado con los *pellets* de vitamina E.
 
+::: notes
+Recordar que no se ve el template de agujas en MRI
+:::
+
 # Publicación 2
 
 ![](img/preplan-1.png)
@@ -700,7 +751,7 @@ Notes
 ![](img/TB_freecad.png)
 
 ::: notes
-Notes
+Intentar encontrar técnicas para encontrar la configuración óptima del TB para el implante
 :::
 
 ## Material y métodos I
@@ -711,6 +762,7 @@ Notes
 -   Implante con el listado de agujas acordado
 
 ::: notes
+Un buen comienzo es cargar todas las agujas y ver qué posiciones se activan para cubrir el riesgo intermedio poniendo las agujas a la máxima profundidad
 :::
 
 ## Material y métodos II
@@ -718,6 +770,7 @@ Notes
 ![](img/Preplan1.jpg)
 
 ::: notes
+Una vez hecho configurador y generador del aplicador
 :::
 
 ## Resultados
@@ -747,6 +800,10 @@ Notes
 -   Planificación de tratamientos con componentes intersticiales sobre MRI exclusiva
 -   Sugerencias a los especialistas sobre mejoras de los TPS desde la perspectiva del ORT y del MP
 
+::: notes
+Especificidad de la planificación exclusiva para el cérvix y bla bla bla
+:::
+
 ## Autores y TPS Analizados
 
 ### Experiencia de los Autores
@@ -759,6 +816,11 @@ Notes
 - Brachyvision v16.0 de Varian 
 - Oncentra v4.6.2 de Elekta 
 - Sagiplan v2.2 de BEBIG 
+
+::: notes
+Reconocer que los expertos eran la mayoría usuarios de Oncentra y solamente 1 de Varian
+:::
+
 
 ## Metodología de Revisión y Evaluación
 
@@ -801,6 +863,12 @@ Notes
 -   Sistemas de Seguimiento Electromagnético: verificación de la trayectoria de la fuente de BT.
 -   Reconstrucción Semiautomatizada de Catéteres
 -   Algoritmos de Aprendizaje Profundo: investigados para la HDR ginecológica basada en MRI.
+
+::: notes
+EM solamente de momento para QA
+
+Recordar que la reconstrucción de agujas son trabajos hechos para templates de próstata
+:::
 
 # Trabajos derivados
 
@@ -916,6 +984,8 @@ scene.show()
 
 ::: notes
 Explicar el intento de parametrizar el aplicador para convertirlo en rígido. Volver sobre el concepto de semirígidos.
+
+Es un CT pero como prueba de concepto era suficiente
 :::
 
 ## AAPM2019 III
@@ -934,6 +1004,8 @@ A novel tool for the reconstruction of the Utrecht applicator on MRI
 
 ::: notes
 Hablar a futuro de intentar utilizar la AI para automatizar completamente el proceso y obviar la parte de ajustar la parte intracavitaria
+
+Utiliza las dummies de los canales para configurar el aplicador. Se puede volver a el modelo de Utrecht de las diapositivas anteriores
 :::
 
 # Conclusiones
