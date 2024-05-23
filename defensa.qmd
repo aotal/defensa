@@ -56,7 +56,7 @@ def embed_youtube(div_id, video_id, start, end, width=500, height=280, autoplay=
                 loop: 1,
                 playlist: video_id,
                 mute: {mute},
-                iv_load_policy: 3,
+                iv_load_policy: 1,
             }},
             events: {{
                 'onReady': function(event) {{
@@ -98,6 +98,7 @@ def embed_youtube(div_id, video_id, start, end, width=500, height=280, autoplay=
 Notes
 :::
 
+
 ## Cáncer de cuello uterino {.center}
 
 ![](img/EstadisticaCCervix.jpg)
@@ -128,7 +129,7 @@ Recordar que hablaremos de braquiterapia menos en el artículo 3 que pasaremos p
 
 :::
 
-## Esquema de tratamiento {auto-animate="true"}
+## Esquema de tratamiento {auto-animate="true" }
 
 ::: {style="margin-top: 200px; font-size: 2em; color: red;"}
 Braquiterapia
@@ -284,7 +285,7 @@ embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280,
 ::: notes
 :::
 
-# Dummies en MRI
+# *Dummies* en MRI
 
 ## *Dummies* CT
 
@@ -298,7 +299,7 @@ embed_youtube("player2", "hXDZ8aUN9-A", start=30, end=52, width=500, height=280,
 Hechas de materiales de Z alto Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto.
 :::
 
-## Dummies MRI
+## *Dummies* MRI
 
 ::: {layout-ncol="3"}
 ![](img/DummiesMR_Image.jpg){width="85%"}
@@ -342,7 +343,9 @@ Hechas de materiales con "hidrógenos"(Por la resonancia) Al ser líquidos, prob
 
 -   En contraposición a la reconstrucción directa, no es necesario conocer completamente la trayectoria de la fuente y la primera posición de parada.
 
+::: {.fragment .highlight-red}
 -   Es útil unicamente en aplicadores rígidos
+:::
 
 ::: notes
 :::
@@ -587,10 +590,6 @@ Hubo que crear una aguja
 ![](img/freecad_logo.png)
 :::
 
-## Material y métodos III
-
-{{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
-
 
 ## Resultados I
 
@@ -644,6 +643,10 @@ graph TD;
 :::
 :::
 
+## Resultados III
+
+{{< video https://www.youtube.com/embed/AhJ1L-rfLtY?&autoplay=1&playlist=AhJ1L-rfLtY&loop=1&mute=1&hl=en&answer=140174 width="1100" height="600" >}}
+
 ## Discusión
 
 -   El método agiliza la reconstrucción de las agujas ya que se apoya en la parte intracavitaria
@@ -688,7 +691,7 @@ Notes
 
 -   Determinación previa de vectores y su profundidad
 -   Ahorro significativo de tiempo
--   Pacientes histerectomizadas: Mínimos cambios de pre- a post-plan
+-   Pacientes histerectomizadas: Mínimos cambios de pre a post-plan
 -   Pacientes no operados: Cambios menores en la componente intersticial del implante, aproximadamente 5 mm en la punta de los vectores para una profundidad típica de 160 mm
 
 ## Discusión
@@ -714,43 +717,29 @@ Notes
 ## Autores y TPS Analizados
 
 ### Experiencia de los Autores
-
-```         
-- ORT y MP con amplia experiencia en braquiterapia HDR de cérvix con MRI
+         
+- ORT y MP con amplia experiencia en BT-HDR de cérvix con MRI
 - Representan centros españoles líderes en implantes
-```
 
 ### TPS Analizados
 
-```         
-- Brachyvision v16.0 de Varian (Varian Medical Systems, Palo Alto, CA, USA)
-- Oncentra v4.6.2 de Elekta (Elekta AB, Estocolmo, Suecia)
-- Sagiplan v2.2 de BEBIG (Eckert & Ziegler BEBIG GmbH, Berlín, Alemania)
-```
+- Brachyvision v16.0 de Varian 
+- Oncentra v4.6.2 de Elekta 
+- Sagiplan v2.2 de BEBIG 
 
 ## Metodología de Revisión y Evaluación
 
 ### Metodología de Revisión
-
-```         
-- Basada en experiencia clínica de los autores y demostraciones interactivas de los fabricantes
-- Versiones probadas: últimas disponibles comercialmente, incluyendo nuevas herramientas
+         
+- Basada en experiencia clínica de los autores y demostraciones interactivas de los especialistas
  
-```
-
 ### Procedimiento de Evaluación
-
-```         
-- Introducción a utilidades y herramientas de los sistemas de planificación
-- Especialistas de los fabricantes respondieron a cuestiones clínicas
-```
+         
+- Cuestionario respondido por los especialistas.
 
 ### Evaluación Sistemática
-
-```         
-- Demostraciones basadas en cuestionario
-- Preguntas sobre software y dispositivos externos, disponibles comercialmente o en desarrollo
-```
+     
+- Mediante el cuestinario y preguntas sobre productos ofertados o en desarrollo
 
 ## Cuestionario
 
@@ -933,6 +922,61 @@ Notes
 
 # Gracias por su atención
 
-::: notes
-Notes
-:::
+```{python}
+#| layout-ncol: 2
+#| fig-cap: 
+#|   - "[https://aotal.github.io/defensa/](https://aotal.github.io/defensa/)"
+#|   - "[https://aotal.github.io/memoria_tesis/](https://aotal.github.io/memoria_tesis/)"
+
+import qrcode
+import matplotlib.pyplot as plt
+from PIL import Image
+from io import BytesIO
+
+# La URL que deseas convertir en un código QR
+url = 'https://aotal.github.io/defensa/'
+
+# Generar el código QR
+qr = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=10,
+    border=4,
+)
+qr.add_data(url)
+qr.make(fit=True)
+
+# Crear una imagen del código QR
+img = qr.make_image(fill='black', back_color='white').convert('RGBA')
+
+
+# Mostrar la imagen con matplotlib sin ejes
+fig, ax = plt.subplots()
+ax.imshow(img,cmap='gray')
+ax.axis('off')  # Ocultar ejes
+plt.show()
+
+# La URL que deseas convertir en un código QR
+url = 'https://aotal.github.io/memoria_tesis/'
+
+# Generar el código QR
+qr = qrcode.QRCode(
+    version=1,
+    error_correction=qrcode.constants.ERROR_CORRECT_L,
+    box_size=10,
+    border=4,
+)
+qr.add_data(url)
+qr.make(fit=True)
+
+# Crear una imagen del código QR
+img = qr.make_image(fill='black', back_color='white').convert('RGBA')
+
+
+# Mostrar la imagen con matplotlib sin ejes
+fig, ax = plt.subplots()
+ax.imshow(img,cmap='gray')
+ax.axis('off')  # Ocultar ejes
+plt.show()
+
+```
